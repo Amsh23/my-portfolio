@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه‌های من | امیر</title>
+
+    <!-- استایل‌های سفارشی -->
+    <style>
+        /* ریست پیش‌فرض مرورگرها */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* طرح پس‌زمینه گرادیان */
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* هدر با انیمیشن متن */
+        .header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-bottom: 2px solid #00b894;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: glow 2s ease-in-out infinite;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #aaa;
+        }
+
+        /* کارت‌های پروژه */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .project-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #00b894;
+        }
+        .project-card ul {
+            list-style-type: none;
+            margin-bottom: 1.5rem;
+        }
+        .project-card ul li {
+            margin: 0.5rem 0;
+        }
+
+        /* دکمه‌ها */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 1rem 0;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        .demo-btn {
+            background: #00b894;
+            color: white;
+            border: 2px solid #00cec9;
+        }
+        .demo-btn:hover {
+            background: #00cec9;
+            border: 2px solid #00b894;
+        }
+
+        /* انیمیشن‌های CSS */
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 15px #00b894, 0 0 30px #00cec9; }
+            50% { text-shadow: 0 0 25px #00b894, 0 0 50px #00cec9; }
+        }
+
+        /* طراحی واکنشگرا */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 3rem;
+            }
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+            .project-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- بخش هدر -->
+    <header class="header">
+        <h1>🚀 پروژه‌های من</h1>
+        <p>طراحی و توسعه توسط امیر</p>
+    </header>
+
+    <!-- بخش پروژه‌ها -->
+    <main>
+        <div class="projects-container">
+            <!-- کارت پورتفولیو -->
+            <article class="project-card">
+                <h2>🎨 پورتفولیو شخصی</h2>
+                <p>یک پورتفولیو مدرن با قابلیت‌های:</p>
+                <ul>
+                    <li>✅ طراحی واکنشگرا</li>
+                    <li>🎯 انیمیشن‌های CSS</li>
+                    <li>📱 سازگاری با موبایل</li>
+                    <li>🌈 طرح‌های رنگی پویا</li>
+                </ul>
+                <a href="https://USERNAME.github.io/portfolio/" class="btn demo-btn">مشاهده دمو</a>
+            </article>
+
+            <!-- کارت چت باکس -->
+            <article class="project-card">
+                <h2>💬 چت باکس زنده</h2>
+                <p>سیستم چت ریل‌تایم با فناوری‌های:</p>
+                <ul>
+                    <li>⚡️ WebSocket</li>
+                    <li>🚀 Node.js</li>
+                    <li>📡 ارتباط دوطرفه</li>
+                    <li>☁️ میزبانی روی Render</li>
+                </ul>
+                <a href="https://real-time-chatbox.onrender.com/" class="btn demo-btn">ورود به چت</a>
+            </article>
+
+            <!-- کارت ربات تلگرام -->
+            <article class="project-card">
+                <h2>🤖 ربات هوشمند تلگرام</h2>
+                <p>در حال توسعه با قابلیت‌های:</p>
+                <ul>
+                    <li>🎥 دانلود از یوتیوب</li>
+                    <li>🧠 هوش مصنوعی ChatGPT</li>
+                    <li>🎙 تبدیل ویس به متن</li>
+                    <li>📤 پست خودکار در رددیت</li>
+                </ul>
+                <button class="btn" disabled>به زودی...</button>
+            </article>
+        </div>
+    </main>
+
+    <!-- اسکریپت‌های تعاملی -->
+    <script>
+        // افزودن افکت اسکرول نرم
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // افکت hover برای کارت‌ها
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const x = e.pageX - card.offsetLeft;
+                const y = e.pageY - card.offsetTop;
+                card.style.transform = `perspective(1000px) rotateX(${(y - card.offsetHeight/2)/10}deg) rotateY(${-(x - card.offsetWidth/2)/10}deg)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
